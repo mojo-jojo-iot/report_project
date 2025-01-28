@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{helvet}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usetikzlibrary{calc}
+
+% Color scheme
+\definecolor{primary}{HTML}{FF6B00}  % Orange
+\definecolor{secondary}{HTML}{000000} % Black
+\definecolor{background}{HTML}{FFFFFF} % White
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+% Header with proper logo positioning
+\begin{tikzpicture}[remember picture,overlay]
+    % Logo positioning (adjust width and coordinates as needed)
+    \node[anchor=north west,
+          xshift=1.5cm,
+          yshift=-1cm,
+          inner sep=0]
+          at (current page.north west)
+          {\includegraphics[width=2.5cm]{images.jpg}};
+
+    % Header text positioning
+    \node[anchor=north east,
+          xshift=-1.5cm,
+          yshift=-1.5cm]
+          at (current page.north east)
+          {
+            \begin{tabular}{r}
+                \color{secondary}\Large\textbf{Ybi Foundation} \\
+                \color{primary}\rule[0.5em]{6cm}{2pt} \\
+                \color{secondary}\large\textbf{Weekly Progress Report} \\
+                \color{secondary}\textbf{(Dec 16-21, 2024)} \\
+                \color{primary}\LARGE\textbf{WEEK 4}
+            \end{tabular}
+          };
+\end{tikzpicture}
+
+\vspace*{3cm} % Adjusted spacing for the header
+
+% Project Details
+\noindent
+\begin{tabularx}{\textwidth}{|>{\color{secondary}\bfseries}l|X|}
+    \hline
+    \rowcolor{primary!10}
+    PROJECT NAME & \color{secondary}Intelligent Handwritten Text Recognition using Deep Learning \\
+    \hline
+\end{tabularx}
+
+\vspace{0.5cm} % Adjusted spacing
+
+\textcolor{primary}{\textbf{PROJECT DESCRIPTION:}} \\
+\color{secondary}This project develops a deep learning system for handwritten text recognition using CNNs and RNNs. Focus areas include multilingual support, noise reduction, and applications in document digitization. \\
+
+% Group Information
+\vspace{0.5cm} % Adjusted spacing
+\noindent
+\begin{tabularx}{\textwidth}{|>{\color{secondary}\bfseries}l|X|}
+    \hline
+    \rowcolor{primary!10}
+    GROUP MEMBERS & Hitesh C. Bopche, Musaddique Ali \\
+    \hline
+    GROUP GUIDE & Dr. Alok Yadav \\
+    \hline
+    GROUP GUIDE No. & 9667987711 \\
+    \hline
+    COLLEGE GUIDE NAME & Ajitesh Moy Ghosh \\
+    \hline
+    COLLEGE GUIDE No. & 9831065574 \\
+    \hline
+    COLLEGE GUIDE EMAIL & \color{primary}\underline{ajitesh.ghosh36908@paruluniversity.ac.in} \\
+    \hline
+    COLLEGE NAME & PARUL INSTITUTE OF TECHNOLOGY, PARUL UNIVERSITY \\
+    \hline
+\end{tabularx}
+
+% Weekly Activities
+\vspace{0.5cm} % Adjusted spacing
+\textcolor{primary}{\textbf{WEEKLY ACTIVITIES:}}
+
+\noindent
+\begin{tabularx}{\textwidth}{|>{\color{secondary}\bfseries}p{2.5cm}|X|}
+    \hline
+    \rowcolor{primary!10}
+    \color{secondary}\textbf{Date} & \color{secondary}\textbf{Activities} \\
+    \hline
+    16/12/2024 (Mon) &
+    \begin{itemize}[leftmargin=*, nosep, label=\color{primary}\textbullet]
+        \item Computer vision basics
+    \end{itemize} \\
+    \hline
+    17/12/2024 (Tue) &
+    \begin{itemize}[leftmargin=*, nosep, label=\color{primary}\textbullet]
+        \item PyTorch fundamentals
+    \end{itemize} \\
+    \hline
+    18/12/2024 (Wed) &
+    \begin{itemize}[leftmargin=*, nosep, label=\color{primary}\textbullet]
+        \item Tensor operations and autograd
+    \end{itemize} \\
+    \hline
+    19/12/2024 (Thu) &
+    \begin{itemize}[leftmargin=*, nosep, label=\color{primary}\textbullet]
+        \item Basic neural network in PyTorch
+    \end{itemize} \\
+    \hline
+    20/12/2024 (Fri) &
+    \begin{itemize}[leftmargin=*, nosep, label=\color{primary}\textbullet]
+        \item PyTorch model training basics
+    \end{itemize} \\
+    \hline
+    21/12/2024 (Sat) &
+    \begin{itemize}[leftmargin=*, nosep, label=\color{primary}\textbullet]
+        \item Practice exercises on PyTorch models
+    \end{itemize} \\
+    \hline
+\end{tabularx}
+
+% Next Week Plan
+\vspace{0.5cm} % Adjusted spacing
+\noindent
+\begin{tikzpicture}
+    \node[fill=primary,
+          text=background,
+          rounded corners=5pt,
+          inner xsep=1em,
+          inner ysep=1em,
+          font=\bfseries]
+          at (0,0)
+          {
+            Next Week Plan: Implement Covid detection model
+          };
+\end{tikzpicture}
+
+% Blank page at the end
+\newpage
+\mbox{}
+
+\end{document}
+
